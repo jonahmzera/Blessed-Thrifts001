@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BLESSED THRIFTS 001</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO HEADER -->
+<header class="hero">
+    <div class="hero-content">
+        <h1>BLESSED THRIFTS 001</h1>
+        <p>Quality Men’s Wear • Affordable • Trusted Style</p>
+
+        <a class="hero-btn" href="tel:+25474274387">
+            Call / WhatsApp: +254 742 743 87
+        </a>
+    </div>
+</header>
+
+<!-- T-SHIRTS -->
+<section class="category">
+    <h2>T-Shirts</h2>
+    <div class="products">
+        <div class="product-box">Add Image</div>
+        <div class="product-box">Add Image</div>
+        <div class="product-box">Add Image</div>
+        <div class="product-box">Add Image</div>
+    </div>
+</section>
+
+<!-- SHIRTS -->
+<section class="category dark-section">
+    <h2>Shirts</h2>
+    <div class="products">
+        <div class="product-box">Add Image</div>
+        <div class="product-box">Add Image</div>
+        <div class="product-box">Add Image</div>
+        <div class="product-box">Add Image</div>
+    </div>
+</section>
+
+<!-- SHORTS -->
+<section class="category">
+    <h2>Shorts</h2>
+    <div class="products">
+        <div class="product-box">Add Image</div>
+        <div class="product-box">Add Image</div>
+        <div class="product-box">Add Image</div>
+        <div class="product-box">Add Image</div>
+    </div>
+</section>
+
+<!-- TROUSERS -->
+<section class="category dark-section">
+    <h2>Trousers</h2>
+    <div class="products">
+        <div class="product-box">Add Image</div>
+        <div class="product-box">Add Image</div>
+        <div class="product-box">Add Image</div>
+        <div class="product-box">Add Image</div>
+    </div>
+</section>
+
+<!-- ORDER -->
+<section class="order-section">
+    <h2>Place Your Order</h2>
+    <p>Write everything you like and we’ll handle the rest.</p>
+
+    <textarea id="orderMessage" placeholder="Example:
+2 T-Shirts (Size M)
+1 Shirt (Blue, Size L)
+Delivery Location: Nairobi"></textarea>
+
+    <button onclick="sendToWhatsApp()">Send Order via WhatsApp</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <h3>BLESSED THRIFTS 001</h3>
+
+        <p>
+            TikTok:
+            <br>
+            <strong>@blessednancy001</strong>
+            <br>
+            <strong>@blessedthrifts001</strong>
+        </p>
+
+        <p class="creator">
+            Website created by <strong>Jonah Mzera</strong><br>
+            📧 <a href="mailto:jonahmzera@gmail.com">jonahmzera@gmail.com</a>
+        </p>
+
+        <p class="copyright">
+            © 2026 BLESSED THRIFTS 001. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<script>
+function sendToWhatsApp() {
+    var message = document.getElementById("orderMessage").value;
+
+    if (message.trim() === "") {
+        alert("Please write your order first.");
+        return;
+    }
+
+    var phoneNumber = "25474274387";
+    var fullMessage = "Hello BLESSED THRIFTS 001,\n\nI would like to order:\n" + message;
+
+    var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(fullMessage);
+    window.open(whatsappURL, "_blank");
+}
+</script>
+
+</body>
+</html>
